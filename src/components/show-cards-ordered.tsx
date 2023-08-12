@@ -6,6 +6,7 @@ type ShowWithDate = {
 }
 
 export function NextShow({ shows }: { shows: ShowWithDate[] }) {
+  console.log('getting next show');
   let index = getIndexOfNextShow({ shows });
   return (
     index === -1 ?
@@ -45,6 +46,7 @@ function getIndexOfNextShow({ shows }: { shows: ShowWithDate[] }) {
   const now = new Date();
   for (let i = 0; i < shows.length; i++) {
     let showEndDateTime = new Date(shows[i].endDateTimeValue);
+    console.log(showEndDateTime, now);
     if (showEndDateTime > now) {
       return i;
     }

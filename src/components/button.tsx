@@ -1,10 +1,11 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 
 
 type ButtonType = "Primary" | "Secondary";
 
-export default function ButtonLink({ type, text, link, widthClass, smallOnMobile }: { type: ButtonType, text: string | JSX.Element, link: string, widthClass: string, smallOnMobile?: boolean }) {
+export default function ButtonLink({ type, text, link, widthClass, smallOnMobile }: { type: ButtonType, text: ReactNode, link: string, widthClass: string, smallOnMobile?: boolean }) {
 
 
   return (

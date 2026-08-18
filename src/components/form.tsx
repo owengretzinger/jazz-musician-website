@@ -15,7 +15,7 @@ export default function Form() {
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
-    fetch("/", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...state })

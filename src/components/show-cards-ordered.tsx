@@ -1,7 +1,9 @@
 'use client';
 
+import type { ReactElement } from 'react';
+
 type ShowWithDate = {
-  component: JSX.Element;
+  component: ReactElement;
   endDateTimeValue: number;
 }
 
@@ -38,7 +40,7 @@ export function AllUpcomingShowsText({ shows }: { shows: ShowWithDate[] }) {
   )
 }
 
-export function UpcomingShows({ shows, noUpcomingShows }: { shows: ShowWithDate[], noUpcomingShows: JSX.Element }) {
+export function UpcomingShows({ shows, noUpcomingShows }: { shows: ShowWithDate[], noUpcomingShows: ReactElement }) {
   return (
     getIndexOfNextShow({ shows }) === -1 ?
       noUpcomingShows :

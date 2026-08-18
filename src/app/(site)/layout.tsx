@@ -2,7 +2,7 @@ import Nav from '@/components/nav'
 import './globals.css'
 import { Changa, Dancing_Script } from 'next/font/google'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 
 const changa = Changa({
   subsets: ['latin'],
@@ -35,13 +35,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: '#292826',
-  colorScheme: 'dark',
   creator: 'Owen Gretzinger',
   metadataBase: new URL('https://mattausgretzinger.com'),
   alternates: {
     canonical: '/',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#292826',
+  colorScheme: 'dark',
 };
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
